@@ -234,6 +234,90 @@
             color: var(--primary);
         }
 
+        .account-upload {
+            border: 2px dashed rgba(255, 102, 0, 0.4);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .account-upload:hover {
+            border-color: var(--primary);
+        }
+
+        .upload-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .account-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .account-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 102, 0, 0.1);
+            transition: background 0.3s;
+        }
+
+        .account-item:hover {
+            background: rgba(255, 102, 0, 0.05);
+        }
+
+        .account-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .account-status {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .status-good {
+            background: var(--success);
+        }
+
+        .status-failed {
+            background: var(--error);
+        }
+
+        .status-cooldown {
+            background: var(--warning);
+        }
+
+        .account-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .icon-btn {
+            background: rgba(255, 102, 0, 0.2);
+            border: none;
+            border-radius: 0.375rem;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--light);
+            transition: background 0.3s;
+        }
+
+        .icon-btn:hover {
+            background: rgba(255, 102, 0, 0.4);
+        }
+
         .job-controls {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -487,133 +571,6 @@
             color: var(--primary);
         }
 
-        footer {
-            background: #0a0a0a;
-            position: relative;
-            overflow: hidden;
-            margin-top: 4rem;
-            border-top: 1px solid rgba(255, 102, 0, 0.3);
-        }
-
-        .footer-vortex {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            opacity: 0.7;
-        }
-
-        .footer-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 3rem 3rem 0 0;
-        }
-
-        .footer-top-line {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            height: 1px;
-            width: 33.333%;
-            background: rgba(255, 102, 0, 0.5);
-            border-radius: 50%;
-            filter: blur(1px);
-        }
-
-        .footer-grid {
-            width: 100%;
-            display: grid;
-            gap: 2rem;
-        }
-
-        @media (min-width: 1200px) {
-            .footer-grid {
-                grid-template-columns: 1fr 2fr;
-                gap: 2rem;
-            }
-        }
-
-        .footer-brand {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .footer-logo {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        .footer-copyright {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.875rem;
-        }
-
-        .footer-links-grid {
-            margin-top: 2.5rem;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .footer-links-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .footer-links-grid {
-                margin-top: 0;
-            }
-        }
-
-        .footer-section h3 {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-
-        .social-icon {
-            font-size: 1rem;
-        }
-
         .toast {
             position: fixed;
             top: 20px;
@@ -691,6 +648,25 @@
             display: block;
         }
 
+        .file-input {
+            display: none;
+        }
+
+        .file-upload-btn {
+            background: linear-gradient(90deg, #ff5500, #ff3300);
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 1rem;
+        }
+
+        .file-upload-btn:hover {
+            background: linear-gradient(90deg, #ff7b00, #ff3300);
+        }
+
         @media (max-width: 768px) {
             .dashboard-grid {
                 grid-template-columns: 1fr;
@@ -754,7 +730,7 @@
                         <span>X-Scraper Pro</span>
                     </div>
                     <div class="user-info">
-                        <div class="balance" id="userBalance">Balance: $0.00</div>
+                        <div class="balance" id="userBalance">API Key Active</div>
                         <div id="userName">Guest</div>
                         <button class="logout-btn" id="logoutBtn">Sign Out</button>
                     </div>
@@ -765,7 +741,7 @@
         <div class="container">
             <div class="nav-toggle">
                 <button class="toggle-btn active" data-section="jobs" id="jobsToggle">Jobs</button>
-                <button class="toggle-btn" data-section="settings" id="settingsToggle">Settings</button>
+                <button class="toggle-btn" data-section="accounts" id="accountsToggle">Accounts</button>
                 <button class="toggle-btn" data-section="scrape" id="scrapeToggle">Scrape</button>
             </div>
         </div>
@@ -783,7 +759,6 @@
                                 <div class="job-type-selector">
                                     <button class="job-type-btn active">Followers</button>
                                     <button class="job-type-btn">Comments</button>
-                                    <button class="job-type-btn">Likes</button>
                                 </div>
                                 <button class="btn btn-primary" id="startJobBtn">Start New Job</button>
                             </div>
@@ -827,7 +802,7 @@
                                 
                                 <div class="job-item">
                                     <div class="job-header">
-                                        <div class="job-title">@news_post Likes</div>
+                                        <div class="job-title">@news_post Comments</div>
                                         <div class="job-status status-failed">Failed</div>
                                     </div>
                                     <div class="job-progress">
@@ -937,44 +912,24 @@
                 </div>
             </div>
 
-            <div class="section" id="settingsSection">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-title">Account Settings</h2>
-                    </div>
-                    <div class="account-upload">
-                        <i class="fas fa-file-upload upload-icon"></i>
-                        <h3>Upload Configuration File</h3>
-                        <p>Upload your configuration file to update settings</p>
-                        <button class="btn btn-primary" style="margin-top: 1rem;">Upload File</button>
-                    </div>
-                    <div class="account-list">
-                        <div class="account-item">
-                            <div class="account-info">
-                                <i class="fas fa-user" style="color: var(--primary);"></i>
-                                <span>Profile Settings</span>
-                            </div>
-                            <div class="account-actions">
-                                <button class="icon-btn"><i class="fas fa-edit"></i></button>
-                            </div>
+            <div class="section" id="accountsSection">
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Account Management</h2>
                         </div>
-                        <div class="account-item">
-                            <div class="account-info">
-                                <i class="fas fa-shield-alt" style="color: var(--primary);"></i>
-                                <span>Security Settings</span>
-                            </div>
-                            <div class="account-actions">
-                                <button class="icon-btn"><i class="fas fa-edit"></i></button>
-                            </div>
+                        
+                        <div class="account-upload">
+                            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                            <h3>Upload Account Files</h3>
+                            <p>Upload .txt files with account credentials</p>
+                            <input type="file" id="accountFile" class="file-input" accept=".txt">
+                            <button class="file-upload-btn" id="uploadAccountBtn">Choose File</button>
+                            <div id="uploadResult" style="margin-top: 1rem;"></div>
                         </div>
-                        <div class="account-item">
-                            <div class="account-info">
-                                <i class="fas fa-bell" style="color: var(--primary);"></i>
-                                <span>Notification Settings</span>
-                            </div>
-                            <div class="account-actions">
-                                <button class="icon-btn"><i class="fas fa-edit"></i></button>
-                            </div>
+                        
+                        <div class="account-list" id="accountListContainer">
+                            <!-- Accounts will be loaded here -->
                         </div>
                     </div>
                 </div>
@@ -989,86 +944,11 @@
                 </div>
             </div>
         </section>
-
-        <footer>
-            <canvas class="footer-vortex" id="footer-vortex"></canvas>
-            <div class="footer-top-line"></div>
-            <div class="footer-content">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <div class="footer-logo">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                        <p class="footer-copyright">© 2023 X-Scraper Pro. All rights reserved.</p>
-                    </div>
-                    
-                    <div class="footer-links-grid">
-                        <div class="footer-section">
-                            <h3>Product</h3>
-                            <ul class="footer-links">
-                                <li><a href="#features">Features</a></li>
-                                <li><a href="#pricing">Pricing</a></li>
-                                <li><a href="#api">API</a></li>
-                                <li><a href="#updates">Updates</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="footer-section">
-                            <h3>Resources</h3>
-                            <ul class="footer-links">
-                                <li><a href="#documentation">Documentation</a></li>
-                                <li><a href="#tutorials">Tutorials</a></li>
-                                <li><a href="#blog">Blog</a></li>
-                                <li><a href="#support">Support</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="footer-section">
-                            <h3>Company</h3>
-                            <ul class="footer-links">
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#careers">Careers</a></li>
-                                <li><a href="#privacy">Privacy</a></li>
-                                <li><a href="#terms">Terms</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="footer-section">
-                            <h3>Connect</h3>
-                            <ul class="footer-links">
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-twitter social-icon"></i>
-                                        Twitter
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-github social-icon"></i>
-                                        GitHub
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-discord social-icon"></i>
-                                        Discord
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-envelope social-icon"></i>
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
 
     <script>
+        const API_BASE_URL = 'http://194.32.77.51:5500';
+        
         const loginPage = document.getElementById('loginPage');
         const dashboardPage = document.getElementById('dashboardPage');
         const loginBtn = document.getElementById('loginBtn');
@@ -1079,26 +959,115 @@
         const userBalance = document.getElementById('userBalance');
         const userName = document.getElementById('userName');
         const startJobBtn = document.getElementById('startJobBtn');
+        const uploadAccountBtn = document.getElementById('uploadAccountBtn');
+        const accountFile = document.getElementById('accountFile');
+        const uploadResult = document.getElementById('uploadResult');
+        const accountListContainer = document.getElementById('accountListContainer');
 
         const toggleButtons = document.querySelectorAll('.toggle-btn');
         const sections = document.querySelectorAll('.section');
 
         const jobTypeButtons = document.querySelectorAll('.job-type-btn');
 
+        let currentApiKey = '';
+
+        async function validateApiKey(apiKey) {
+            try {
+                const response = await fetch(`${API_BASE_URL}/api_key/validate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ api_key: apiKey })
+                });
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('API validation error:', error);
+                return { ok: false, message: 'Network error' };
+            }
+        }
+
+        async function uploadAccounts(apiKey, file) {
+            const formData = new FormData();
+            formData.append('api_key', apiKey);
+            formData.append('file', file);
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/upload_accounts`, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Upload error:', error);
+                return { ok: false, message: 'Network error' };
+            }
+        }
+
+        async function getAccounts(apiKey) {
+            try {
+                const response = await fetch(`${API_BASE_URL}/get_accounts`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ api_key: apiKey })
+                });
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Get accounts error:', error);
+                return { ok: false, message: 'Network error' };
+            }
+        }
+
+        function displayAccounts(accounts) {
+            if (!accounts || accounts.length === 0) {
+                accountListContainer.innerHTML = '<div class="account-item"><div class="account-info"><span>No accounts found</span></div></div>';
+                return;
+            }
+
+            accountListContainer.innerHTML = accounts.map(account => `
+                <div class="account-item">
+                    <div class="account-info">
+                        <div class="account-status ${getStatusClass(account.status)}"></div>
+                        <span>${account.username}</span>
+                        ${account.last_used ? `<small>Last used: ${account.last_used}</small>` : ''}
+                    </div>
+                    <div class="account-actions">
+                        <button class="icon-btn"><i class="fas fa-sync-alt"></i></button>
+                        <button class="icon-btn"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getStatusClass(status) {
+            switch(status) {
+                case 'good': return 'status-good';
+                case 'failed': return 'status-failed';
+                case 'cooldown': return 'status-cooldown';
+                default: return 'status-cooldown';
+            }
+        }
+
         function checkLoginStatus() {
             const isLoggedIn = localStorage.getItem('isLoggedIn');
             const savedApiKey = localStorage.getItem('apiKey');
             const savedUsername = localStorage.getItem('username');
-            const savedBalance = localStorage.getItem('balance');
             
             if (isLoggedIn === 'true' && savedApiKey) {
+                currentApiKey = savedApiKey;
                 showDashboard();
                 if (savedUsername) {
                     userName.textContent = savedUsername;
                 }
-                if (savedBalance) {
-                    userBalance.textContent = `Balance: $${savedBalance}`;
-                }
+                loadAccounts();
             }
         }
 
@@ -1130,19 +1099,22 @@
             loginPage.style.display = 'flex';
         }
 
-        function verifyApiKey(apiKey) {
-            return new Promise((resolve) => {
-                setTimeout(() => {
-                    const mockResponse = {
-                        success: true,
-                        user: {
-                            username: "scraper_pro",
-                            balance: 1250.50
-                        }
-                    };
-                    resolve(mockResponse);
-                }, 1500);
-            });
+        async function loadAccounts() {
+            if (!currentApiKey) return;
+            
+            showLoading();
+            try {
+                const result = await getAccounts(currentApiKey);
+                if (result.ok) {
+                    displayAccounts(result.accounts);
+                } else {
+                    showToast('Failed to load accounts: ' + result.message, false);
+                }
+            } catch (error) {
+                showToast('Error loading accounts', false);
+            } finally {
+                hideLoading();
+            }
         }
 
         loginBtn.addEventListener('click', async () => {
@@ -1156,25 +1128,26 @@
             showLoading();
             
             try {
-                const result = await verifyApiKey(apiKey);
+                const result = await validateApiKey(apiKey);
                 
-                if (result.success) {
+                if (result.ok) {
+                    currentApiKey = apiKey;
                     localStorage.setItem('isLoggedIn', 'true');
                     localStorage.setItem('apiKey', apiKey);
-                    localStorage.setItem('username', result.user.username);
-                    localStorage.setItem('balance', result.user.balance);
+                    localStorage.setItem('username', result.user);
                     
-                    userName.textContent = result.user.username;
-                    userBalance.textContent = `Balance: $${result.user.balance}`;
+                    userName.textContent = result.user;
+                    userBalance.textContent = `Expires: ${result.expiry}`;
                     
                     showToast('API Key verified successfully!');
                     setTimeout(() => {
                         hideLoading();
                         showDashboard();
+                        loadAccounts();
                     }, 1000);
                 } else {
                     hideLoading();
-                    showToast('Invalid API key. Please try again.', false);
+                    showToast('Invalid API key: ' + result.message, false);
                 }
             } catch (error) {
                 hideLoading();
@@ -1187,10 +1160,50 @@
             localStorage.removeItem('isLoggedIn');
             localStorage.removeItem('apiKey');
             localStorage.removeItem('username');
-            localStorage.removeItem('balance');
+            currentApiKey = '';
             hideDashboard();
             apiKeyInput.value = '';
             showToast('You have been logged out');
+        });
+
+        uploadAccountBtn.addEventListener('click', () => {
+            accountFile.click();
+        });
+
+        accountFile.addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            if (!file.name.endsWith('.txt')) {
+                showToast('Please upload a .txt file', false);
+                return;
+            }
+            
+            showLoading();
+            try {
+                const result = await uploadAccounts(currentApiKey, file);
+                if (result.ok) {
+                    uploadResult.innerHTML = `
+                        <div style="color: var(--success);">
+                            Upload successful!<br>
+                            Uploaded: ${result.uploaded}<br>
+                            Duplicates: ${result.duplicates}<br>
+                            Failed: ${result.failed}
+                        </div>
+                    `;
+                    showToast('Accounts uploaded successfully!');
+                    loadAccounts();
+                } else {
+                    uploadResult.innerHTML = `<div style="color: var(--error);">Upload failed: ${result.message}</div>`;
+                    showToast('Upload failed: ' + result.message, false);
+                }
+            } catch (error) {
+                uploadResult.innerHTML = `<div style="color: var(--error);">Upload error</div>`;
+                showToast('Upload error', false);
+            } finally {
+                hideLoading();
+                accountFile.value = '';
+            }
         });
 
         toggleButtons.forEach(button => {
@@ -1202,6 +1215,10 @@
                 
                 const sectionId = button.getAttribute('data-section') + 'Section';
                 document.getElementById(sectionId).classList.add('active');
+                
+                if (sectionId === 'accountsSection') {
+                    loadAccounts();
+                }
             });
         });
 
